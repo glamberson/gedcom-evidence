@@ -9,7 +9,8 @@ https://github.com/FamilySearch/GEDCOM-registries/pull/173
 
 The files follow the official GEDCOM registry structure:
 
-- `structure/` - Extension tag definitions (_EVID, _FIND, _RDOC, etc.)
+- `record/` - Record type definitions (record-EVID, record-_RDOC)
+- `structure/` - Extension tag definitions (_EVID as substructure, _FIND, etc.)
 - `enumeration/` - Individual enumeration values (High, Medium, Low, Hypothesis)
 - `enumeration-set/` - Enumeration set definition (Confidence)
 
