@@ -1,24 +1,17 @@
 %YAML 1.2
 ---
 contact: https://github.com/glamberson/gedcom-evidence
-extension tags:
-- _FIND
+extension tags: _FIND
 label: Evidence Finding
 lang: en-US
 payload: null
 specification:
 - Evidence Finding
 - 'A specific finding or fact extracted from evidence. _FIND structures
-
   represent individual pieces of information found in sources, such as
-
   names, dates, places, ages, relationships, or occupations.
-
-
   Findings preserve the exact information as it appears in the source,
-
   including original spelling, formatting, and context, allowing researchers
-
   to maintain data fidelity throughout the research process.'
 substructures:
   https://gedcom.io/terms/v7/AGE: '{0:1}'
