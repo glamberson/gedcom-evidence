@@ -48,10 +48,12 @@ Tracks research process, including negative searches.
 
 - [Specification](specification.md) - Technical details and YAML definitions
 - [Design Rationale](design-rationale.md) - Why we made these choices
-- [Community Insights](community-insights.md) - 15 years of discussions analyzed
+- [Migration Guide](migration-guide.md) - Upgrading from traditional GEDCOM
 - [Use Cases](use-cases.md) - Real-world examples
+- [Community Insights](community-insights.md) - Community discussions summary
 - [Glossary](glossary.md) - Terms and concepts
-- [Migration Guide](migration-guide.md) - Adopting the extension
+- [YAML Definitions](yaml/) - Original extension definitions
+- [Registry-Compliant YAML](registry-yaml/) - Official registry format
 
 ## Key Benefits
 
@@ -72,6 +74,12 @@ This extension synthesizes insights from:
 - 594 community discussions
 - 47 detailed proposals
 - 74 contributing genealogists and developers
+
+## Status
+
+**Published** - v0.1.0 released
+
+**Registry Submission** - Submitted to [GEDCOM Registry PR #173](https://github.com/FamilySearch/GEDCOM-registries/pull/173)
 
 ## Contributing
 
