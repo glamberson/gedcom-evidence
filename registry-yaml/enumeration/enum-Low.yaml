@@ -1,3 +1,5 @@
+%YAML 1.2
+---
 lang: en-US
 type: enumeration
 uri: https://github.com/glamberson/gedcom-evidence/enum-Low
@@ -9,3 +11,4 @@ specification:
 value of:
 - https://github.com/glamberson/gedcom-evidence/enumset-Confidence
 contact: https://github.com/glamberson/gedcom-evidence
+...
