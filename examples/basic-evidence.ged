@@ -1,0 +1,95 @@
+0 HEAD
+1 GEDC
+2 VERS 7.0
+1 SCHMA
+2 TAG _EVID https://github.com/glamberson/gedcom-evidence/v1/EVID
+2 TAG _RDOC https://github.com/glamberson/gedcom-evidence/v1/RDOC
+2 TAG _RACT https://github.com/glamberson/gedcom-evidence/v1/RACT
+2 TAG _ID https://github.com/glamberson/gedcom-evidence/v1/ID
+2 TAG _CONF https://github.com/glamberson/gedcom-evidence/v1/CONF
+1 SOUR GEDCOM_Evidence_Example
+2 VERS 0.1.0
+1 DATE 28 JAN 2025
+1 LANG en-US
+
+0 @S1@ SOUR
+1 TITL 1850 United States Federal Census
+1 PUBL National Archives and Records Administration
+
+0 @S2@ SOUR  
+1 TITL Hamilton County Death Certificates
+1 PUBL Hamilton County Clerk's Office
+
+0 @E1@ _EVID
+1 _TYPE Person
+1 _ID John Smith
+1 _ID son of Mary
+1 _ID aged 40
+1 _ID farmer
+1 SOUR @S1@
+2 PAGE Hamilton County, Ohio, Page 247, Line 12
+2 DATE 15 JUL 1850
+
+0 @E2@ _EVID
+1 _TYPE Person
+1 _ID John Smith
+1 _ID son of Mary Smith
+1 _ID died 15 Mar 1885
+1 _ID aged 75 years
+1 SOUR @S2@
+2 PAGE Certificate #1885-234
+2 DATE 16 MAR 1885
+
+0 @I1@ INDI
+1 NAME John /Smith/
+1 SEX M
+1 BIRT
+2 DATE ABT 1810
+2 PLAC Ohio, USA
+1 DEAT
+2 DATE 15 MAR 1885
+2 PLAC Hamilton County, Ohio, USA
+1 _EVID @E1@
+2 _CONF 5
+2 NOTE Census record matches known facts
+1 _EVID @E2@
+2 _CONF 5
+2 NOTE Death certificate confirms identity
+
+0 @I2@ INDI
+1 NAME John /Smith/
+1 SEX M
+1 BIRT
+2 DATE ABT 1812
+1 _EVID @E1@
+2 _CONF 2
+2 NOTE Possibly this John, but age is off
+1 _EVID @E2@
+2 _CONF 1
+2 NOTE Mother's name doesn't match
+
+0 @R1@ _RDOC
+1 _TITL Analysis of John Smith Census and Death Records
+1 _TEXT The 1850 census shows John Smith, aged 40, son of Mary.
+2 CONT The death certificate shows John Smith dying in 1885, aged 75,
+2 CONT son of Mary Smith. The ages match perfectly (40 in 1850 + 35 
+2 CONT years = 75 in 1885). This confirms @I1@ is the correct person.
+1 _EVID @E1@
+1 _EVID @E2@
+1 _CONC
+2 _SUBJ @I1@
+2 _TEXT John Smith @I1@ is definitively identified by matching evidence
+1 AUTH Jane Researcher
+1 DATE 28 JAN 2025
+
+0 @A1@ _RACT
+1 _TYPE Search
+1 _PURP Find birth record for John Smith
+1 _TARG Birth records 1805-1815
+1 _VENU Hamilton County Courthouse
+1 _RSLT NotFound
+1 DATE 20 JAN 2025
+1 _RSRCH Jane Researcher
+1 NOTE Searched birth registers but records before 1820 were destroyed by fire
+
+0 TRLR

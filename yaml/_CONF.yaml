@@ -1,0 +1,34 @@
+%YAML 1.2
+---
+lang: en-US
+type: structure
+uri: https://github.com/genealogy-standards/gedcom-evidence/v1/CONF
+
+label: Confidence Level
+specification: |
+  Indicates confidence that evidence applies to a specific person.
+  Integer scale from 0 to 5:
+  
+  0 = Definitely not this person (contradictory evidence)
+  1 = Very unlikely (20% confidence)
+  2 = Unlikely (40% confidence)  
+  3 = Possible (60% confidence)
+  4 = Likely (80% confidence)
+  5 = Certain (100% confidence)
+  
+  Allows the same evidence to be associated with multiple persons
+  with different confidence levels, reflecting real research
+  uncertainty. Should be accompanied by _RDOC explaining the
+  reasoning behind the confidence assessment.
+
+payload: Integer
+
+substructures: []
+
+superstructures:
+  - _EVID
+
+value:
+  type: Integer
+  minimum: 0
+  maximum: 5

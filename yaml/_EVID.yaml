@@ -1,0 +1,43 @@
+%YAML 1.2
+---
+lang: en-US
+type: record
+uri: https://github.com/genealogy-standards/gedcom-evidence/v1/EVID
+
+label: Evidence Container
+specification: |
+  A container for information extracted from a source. Uses identifiers
+  to describe subjects without making conclusions about specific persons.
+  Evidence can float unattached or be associated with multiple persons
+  with different confidence levels.
+  
+  Key characteristics:
+  - Immutable after creation (represents what source actually says)
+  - Can exist independently (floating evidence)
+  - Can be claimed by multiple persons with different confidence
+  - Must cite at least one source
+  
+  This addresses the fundamental "Which John Smith?" problem where
+  evidence mentions someone but you don't yet know which person in
+  your database they are.
+
+payload: null
+
+substructures:
+  - _TYPE: "{0:1}"
+  - _ID: "{1:M}"
+  - SOUR: "{1:M}"
+  - NOTE: "{0:M}"
+  - CHAN: "{0:1}"
+
+superstructures: []
+
+value of:
+  - _TYPE:
+      type: enumeration
+      values:
+        - Person
+        - Event  
+        - Relationship
+        - Place
+        - Other
