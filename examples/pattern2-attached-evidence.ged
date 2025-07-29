@@ -1,0 +1,81 @@
+0 HEAD
+1 GEDC
+2 VERS 7.0
+1 SCHMA
+2 TAG _EVEN_EVID https://github.com/glamberson/gedcom-evidence/_EVEN_EVID
+2 TAG _FIND https://github.com/glamberson/gedcom-evidence/_FIND
+2 TAG _CONF https://github.com/glamberson/gedcom-evidence/_CONF
+
+0 @S1@ SOUR
+1 TITL Massachusetts Vital Records
+1 PUBL Commonwealth of Massachusetts
+
+0 @S2@ SOUR
+1 TITL Find A Grave
+1 PUBL Find A Grave, Inc.
+
+0 @I1@ INDI
+1 NAME Sarah Elizabeth /Jones/
+1 SEX F
+1 BIRT
+2 DATE 4 MAY 1823
+2 PLAC Boston, Suffolk, Massachusetts, USA
+1 DEAT
+2 DATE 15 JAN 1891
+2 PLAC Cambridge, Middlesex, Massachusetts, USA
+1 _EVEN_EVID
+2 TYPE Evidence Discovery
+2 DATE 10 MAR 2024
+2 SOUR @S1@
+3 PAGE Volume 123, Page 456
+2 _FIND Sarah Elizabeth Jones
+3 TYPE Name
+2 _FIND Born May 4, 1823
+3 TYPE Birth Date
+2 _FIND Daughter of William Jones and Elizabeth Smith
+3 TYPE Parentage
+2 _FIND Boston, Massachusetts
+3 TYPE Birth Place
+2 _CONF High
+2 NOTE Birth certificate directly names this individual
+1 _EVEN_EVID
+2 TYPE Evidence Discovery
+2 DATE 12 MAR 2024
+2 SOUR @S2@
+3 PAGE Memorial #123456789
+2 _FIND Sarah E. Jones
+3 TYPE Name on Headstone
+2 _FIND 1823-1891
+3 TYPE Date on Headstone
+2 _FIND Beloved Wife and Mother
+3 TYPE Inscription
+2 _FIND Mount Auburn Cemetery
+3 TYPE Cemetery Name
+2 _CONF High
+2 NOTE Headstone photo clearly visible, dates match exactly
+
+0 @I2@ INDI
+1 NAME William /Jones/
+1 SEX M
+1 _EVEN_EVID
+2 TYPE Evidence Discovery
+2 DATE 10 MAR 2024
+2 SOUR @S1@
+3 PAGE Volume 123, Page 456
+2 _FIND Named as father on Sarah's birth certificate
+3 TYPE Relationship Evidence
+2 _CONF High
+
+0 @I3@ INDI
+1 NAME Elizabeth /Smith/
+1 SEX F
+1 _EVEN_EVID
+2 TYPE Evidence Discovery
+2 DATE 10 MAR 2024
+2 SOUR @S1@
+3 PAGE Volume 123, Page 456
+2 _FIND Named as mother on Sarah's birth certificate
+3 TYPE Relationship Evidence
+2 _CONF High
+
+0 TRLR
