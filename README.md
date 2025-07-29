@@ -1,85 +1,126 @@
-# GEDCOM 7 Evidence Extension
+# GEDCOM Evidence Extension
+
+A GEDCOM 7-compliant extension for evidence-based genealogy, supporting the Genealogical Proof Standard (GPS) through dual patterns that work within GEDCOM's structural constraints.
+
+## Version
+
+0.2.0 - Complete redesign for GEDCOM 7 compliance
 
 ## Overview
 
-The GEDCOM Evidence Extension enables proper evidence-based genealogy by providing structures to separate what sources say (evidence) from what researchers conclude (conclusions). This extension is based on 15 years of community discussion, particularly insights from the BetterGEDCOM project (2010-2013).
+This extension provides two complementary patterns for handling evidence in genealogical research:
 
-## Why This Extension Exists
+1. **Shadow Records Pattern** - Floating evidence that can be referenced by multiple individuals
+2. **Event Container Pattern** - Evidence attached directly to specific individuals
 
-After analyzing 594 discussions with 4,970 replies from genealogy professionals and software developers, we identified a critical gap: **current genealogy software forces users to make premature conclusions about identity**. When you find a record mentioning "John Smith," you must immediately decide WHICH John Smith it refers to, potentially losing the original evidence if your conclusion proves wrong.
+Both patterns work within GEDCOM 7's rules while supporting evidence-first research methodologies.
 
-This extension solves that problem by allowing evidence to "float" until you determine through research which person it describes.
+### Key Features
 
-## Quick Start
+- **GEDCOM 7 Compliant** - Follows all pointer, record, and substructure rules
+- **Evidence Containers** - Store source information exactly as found
+- **Flexible References** - Individuals can reference shared evidence
+- **Confidence Assessment** - Track your confidence in evidence connections
+- **GPS Support** - Aligns with professional genealogical standards
+
+## Why This Redesign?
+
+Version 0.1.x attempted polymorphic pointers and bidirectional references that violate core GEDCOM rules. Version 0.2.0 works WITH GEDCOM's constraints for a cleaner, compliant design.
+
+## Installation
+
+1. GEDCOM 7-compatible software should automatically recognize these extension tags
+2. The YAML files follow the official GEDCOM registry format
+3. All structures are designed to integrate seamlessly with standard GEDCOM
+
+## The Two Patterns
+
+### Pattern 1: Shadow Records (Floating Evidence)
+
+Use this when evidence might apply to multiple people or when identity is uncertain.
 
 ```gedcom
-# Evidence floating unattached
 0 @E1@ _EVID
-1 _ID John Smith
-1 _ID son of Mary
-1 _ID aged 40
+1 _DTYPE Census
+1 DATE 7 JUN 1850
 1 SOUR @S1@
-2 PAGE 1850 Census, p. 42
+2 PAGE Lines 15-16
+1 _FIND John Smith, age 42, farmer
+2 TYPE Personal Information
+1 _FIND Mary Smith, age 38
+2 TYPE Spouse Information
 
-# Later, tentatively associate with persons
 0 @I1@ INDI
 1 NAME John /Smith/
-1 _EVID @E1@
-2 _CONF 3         # 60% confidence this is him
+1 _EVREF @E1@
+2 _CONF High
+2 _USED Name and age match other records
 
-0 @I2@ INDI
+0 @I99@ INDI
 1 NAME John /Smith/
-1 _EVID @E1@
-2 _CONF 2         # 40% confidence it's this one
+1 _EVREF @E1@
+2 _CONF Low
+2 _USED Age differs by 5 years
 ```
 
-## Core Concepts
+### Pattern 2: Event Container (Attached Evidence)
 
-### 1. Evidence Container (_EVID)
-Stores what sources actually say, using identifiers rather than conclusions.
+Use this when evidence definitively belongs to a specific person.
 
-### 2. Research Documentation (_RDOC)
-Documents analysis and reasoning, supporting GPS compliance.
+```gedcom
+0 @I1@ INDI
+1 NAME Sarah /Jones/
+1 _EVEN_EVID
+2 TYPE Evidence Discovery
+2 DATE 15 MAR 2024
+2 SOUR @S5@
+3 PAGE Image 1234
+2 _FIND Sarah Jones born 4 May 1823
+3 TYPE Birth Information
+2 _CONF High
+```
 
-### 3. Research Activity (_RACT)
-Tracks research process, including negative searches.
+## Extension Structures
 
-## Documentation
-
-- [Specification](specification.md) - Technical details and YAML definitions
-- [Design Rationale](design-rationale.md) - Why we made these choices
-- [Migration Guide](migration-guide.md) - Upgrading from traditional GEDCOM
-- [Use Cases](use-cases.md) - Real-world examples
-- [Community Insights](community-insights.md) - Community discussions summary
-- [Glossary](glossary.md) - Terms and concepts
-- [YAML Definitions](yaml/) - Original extension definitions
-- [Registry-Compliant YAML](registry-yaml/) - Official registry format
+- **_EVID** - Evidence Container Record (level 0)
+- **_EVREF** - Evidence Reference (points from person to evidence)
+- **_FIND** - Specific finding within evidence
+- **_EVEN_EVID** - Evidence as an event
+- **_CONF** - Confidence level (High/Medium/Low/Hypothesis)
+- **_USED** - How evidence was used
+- **_DTYPE** - Document type
+- **_ANAL** - Analysis notes
 
 ## Key Benefits
 
 1. **Preserves Original Evidence** - Never lose what sources actually said
-2. **Supports Uncertain Identity** - Evidence can belong to multiple people
-3. **Documents Research Process** - GPS compliance built-in
-4. **Reversible Conclusions** - Change your mind without losing data
-5. **Professional Standards** - Supports Evidence Explained methodology
+2. **Supports Uncertain Identity** - Evidence can exist independently
+3. **GEDCOM Compliant** - Works within all structural rules
+4. **GPS Aligned** - Supports professional research standards
+5. **Flexible Application** - Use one or both patterns as needed
 
-## Compatibility
+## Documentation
 
-This extension is designed to degrade gracefully. Systems that don't support it will simply ignore the extension tags, preserving standard GEDCOM functionality.
+- [RULES_AND_CONSTRAINTS.md](RULES_AND_CONSTRAINTS.md) - What is and isn't allowed
+- [Design Rationale](design-rationale.md) - Why these design choices
+- [Migration Guide](migration-guide.md) - Upgrading from v0.1.x
+- [Use Cases](use-cases.md) - Real-world examples
+- [Examples](examples/) - Sample GEDCOM files
 
 ## Community Foundation
 
-This extension synthesizes insights from:
-- 318 BetterGEDCOM wiki pages
-- 594 community discussions
-- 47 detailed proposals
-- 74 contributing genealogists and developers
+This extension builds on 15 years of community discussion, particularly:
+- BetterGEDCOM project insights (2010-2013)
+- GEDCOM 7 development feedback
+- Professional genealogist requirements
 
 ## Status
 
-**Published** - v0.1.0 released
+**Version 0.2.0** - Complete redesign addressing fundamental GEDCOM compliance issues
 
-**Registry Submission** - Submitted to [GEDCOM Registry PR #173](https://github.com/FamilySearch/GEDCOM-registries/pull/173)
+**Previous PR** - v0.1.x PR #178 was closed due to rule violations
+
+**Next Steps** - New PR to be submitted with compliant design
 
 ## Contributing
 

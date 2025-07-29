@@ -1,0 +1,84 @@
+0 HEAD
+1 GEDC
+2 VERS 7.0
+1 SCHMA
+2 TAG _EVID https://github.com/glamberson/gedcom-evidence/record-EVID
+2 TAG _EVREF https://github.com/glamberson/gedcom-evidence/_EVREF
+2 TAG _FIND https://github.com/glamberson/gedcom-evidence/_FIND
+2 TAG _CONF https://github.com/glamberson/gedcom-evidence/_CONF
+2 TAG _USED https://github.com/glamberson/gedcom-evidence/_USED
+2 TAG _DTYPE https://github.com/glamberson/gedcom-evidence/_DTYPE
+
+0 @S1@ SOUR
+1 TITL 1850 United States Federal Census
+1 PUBL Ancestry.com
+1 REPO @R1@
+
+0 @R1@ REPO
+1 NAME Ancestry.com
+
+0 @E1@ _EVID
+1 _DTYPE Census
+1 DATE 7 JUN 1850
+1 SOUR @S1@
+2 PAGE Ward 5, Dwelling 234, Family 245, Lines 15-16
+1 _FIND John Smith
+2 TYPE Name
+1 _FIND 42
+2 TYPE Age
+1 _FIND Farmer
+2 TYPE Occupation
+1 _FIND Mary Smith
+2 TYPE Spouse Name
+1 _FIND b. Ireland
+2 TYPE Birth Place
+1 NOTE This census record shows a John Smith household with potential matches to multiple John Smiths in my research
+
+0 @E2@ _EVID
+1 _DTYPE Marriage Certificate
+1 DATE 12 MAY 1825
+1 SOUR @S1@
+2 PAGE Image 1234
+1 _FIND John Smith married Mary Kelly
+2 TYPE Event Description
+1 _FIND St. Patrick's Church, Boston
+2 TYPE Location
+1 _FIND Patrick O'Brien, witness
+2 TYPE Witness
+
+0 @I1@ INDI
+1 NAME John /Smith/
+1 SEX M
+1 BIRT
+2 DATE ABT 1808
+2 PLAC Ireland
+1 _EVREF @E1@
+2 _CONF High
+2 _USED Name, age, and birthplace all match expected values
+2 NOTE Strong candidate - location and family composition match
+1 _EVREF @E2@
+2 _CONF Medium
+2 _USED Marriage date and location are plausible
+
+0 @I2@ INDI
+1 NAME John /Smith/
+1 SEX M
+1 BIRT
+2 DATE ABT 1813
+2 PLAC Ireland
+1 _EVREF @E1@
+2 _CONF Low
+2 _USED Age is off by 5 years from census
+2 NOTE Possible match but age discrepancy is concerning
+1 _EVREF @E2@
+2 _CONF Hypothesis
+2 _USED Would have been only 12 at marriage - unlikely
+
+0 @I3@ INDI
+1 NAME Mary /Kelly/
+1 SEX F
+1 _EVREF @E2@
+2 _CONF High
+2 _USED Named as bride in marriage record
+
+0 TRLR
