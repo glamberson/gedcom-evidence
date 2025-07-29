@@ -5,6 +5,21 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [0.1.5] - 2025-07-29
+
+### Fixed
+- Fixed ALL YAML validation errors found by GEDCOM registry validator
+- Converted 'extension tags' from string to array format in all files
+- Changed invalid 'type: record' to 'type: structure' in record files
+- Added quotes to payloads containing @ symbols
+- Fixed missing empty objects for superstructures
+- Ensured proper spacing between all sections
+
+### Changed
+- All structure files now pass official validator
+- All record files now use correct type designation
+- Updated 9 structure files and 2 record files for full compliance
+
 ## [0.1.4] - 2025-07-29
 
 ### Fixed
@@ -14,7 +29,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Changed
 - Updated enumeration files: enum-High.yaml, enum-Medium.yaml, enum-Low.yaml, enum-Hypothesis.yaml
 
-## [0.1.1] - 2025-01-28
+## [0.1.1] - 2025-07-28
 
 ### Added
 - Registry-compliant YAML files in `registry-yaml/` directory
@@ -31,7 +46,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
   - 4 enumeration definitions (High, Medium, Low, Hypothesis)
   - 1 enumeration-set definition (Confidence)
 
-## [0.1.0] - 2025-01-27
+## [0.1.0] - 2025-07-27
 
 ### Added
 - Initial release
