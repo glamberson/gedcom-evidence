@@ -5,6 +5,15 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [0.1.4] - 2025-07-29
+
+### Fixed
+- Corrected YAML indentation in enumeration files as requested by GEDCOM registry maintainer
+- All list items in YAML files now properly indented with 2 spaces
+
+### Changed
+- Updated enumeration files: enum-High.yaml, enum-Medium.yaml, enum-Low.yaml, enum-Hypothesis.yaml
+
 ## [0.1.1] - 2025-01-28
 
 ### Added
