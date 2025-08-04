@@ -6,8 +6,7 @@ type: structure
 
 uri: https://github.com/glamberson/gedcom-evidence/_CONF
 
-extension tags:
-  - _CONF
+extension tags: [ _CONF ]
 
 specification:
   - Confidence Assessment
@@ -16,7 +15,7 @@ specification:
     This differs from QUAY (data quality) by assessing confidence in
     the connection between evidence and conclusion.
 
-label: Confidence Level
+label: 'Confidence Level'
 
 payload: https://gedcom.io/terms/v7/type-Enum
 
@@ -29,5 +28,5 @@ superstructures:
   "https://github.com/glamberson/gedcom-evidence/_EVREF": "{0:1}"
   "https://github.com/glamberson/gedcom-evidence/_EVEN_EVID": "{0:1}"
 
-contact: https://github.com/glamberson/gedcom-evidence
+contact: lamberson@yahoo.com
 ...

@@ -6,8 +6,7 @@ type: structure
 
 uri: https://github.com/glamberson/gedcom-evidence/_FIND
 
-extension tags:
-  - _FIND
+extension tags: [ _FIND ]
 
 specification:
   - Evidence Finding
@@ -18,7 +17,7 @@ specification:
     can be typed (name, age, occupation, etc.) and can include the
     specific text or value found.
 
-label: Evidence Finding
+label: 'Evidence Finding'
 
 payload: https://gedcom.io/terms/v7/type-Text
 
@@ -30,8 +29,8 @@ substructures:
   "https://gedcom.io/terms/v7/NOTE": "{0:M}"
 
 superstructures:
-  "https://github.com/glamberson/gedcom-evidence/record-EVID": "{0:M}"
+  "https://github.com/glamberson/gedcom-evidence/_EVID": "{0:M}"
   "https://github.com/glamberson/gedcom-evidence/_EVEN_EVID": "{0:M}"
 
-contact: https://github.com/glamberson/gedcom-evidence
+contact: lamberson@yahoo.com
 ...

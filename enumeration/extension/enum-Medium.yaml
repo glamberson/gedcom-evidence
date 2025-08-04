@@ -6,13 +6,16 @@ type: enumeration
 
 uri: https://github.com/glamberson/gedcom-evidence/enum-Medium
 
-standard tag: MEDIUM
+extension tags: [ Medium ]
 
 specification:
-  - Medium confidence
+  - Medium Confidence
+  - |
+    Evidence reasonably supports the conclusion but with some
+    uncertainty. May have minor conflicts or rely on secondary
+    sources, but preponderance of evidence supports conclusion.
 
-value of:
-  - "https://github.com/glamberson/gedcom-evidence/enumset-Confidence"
+label: 'Medium'
 
-contact: https://github.com/glamberson/gedcom-evidence
+contact: lamberson@yahoo.com
 ...

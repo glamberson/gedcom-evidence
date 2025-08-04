@@ -6,26 +6,25 @@ type: structure
 
 uri: https://github.com/glamberson/gedcom-evidence/_DTYPE
 
-extension tags:
-  - _DTYPE
+extension tags: [ _DTYPE ]
 
 specification:
   - Document Type
   - |
-    The type of document or record that contains this evidence.
-    Examples include Census, Birth Certificate, Death Certificate,
-    Marriage License, Will, Land Record, etc. This helps researchers
-    understand the nature and potential reliability of the evidence.
+    Specifies the type of document or record that contains the evidence.
+    This helps researchers understand the nature and potential reliability
+    of the evidence. Common types include Census, Birth Certificate,
+    Marriage License, Death Certificate, Will, Land Record, etc.
 
-label: Document Type
+label: 'Document Type'
 
 payload: https://gedcom.io/terms/v7/type-Text
 
 substructures:
-  "https://gedcom.io/terms/v7/NOTE": "{0:M}"
+  "https://gedcom.io/terms/v7/PHRASE": "{0:1}"
 
 superstructures:
-  "https://github.com/glamberson/gedcom-evidence/record-EVID": "{0:1}"
+  "https://github.com/glamberson/gedcom-evidence/_EVID": "{0:M}"
 
-contact: https://github.com/glamberson/gedcom-evidence
+contact: lamberson@yahoo.com
 ...

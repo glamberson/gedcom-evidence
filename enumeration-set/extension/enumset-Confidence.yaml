@@ -10,7 +10,7 @@ specification:
   - Confidence levels
   - Set of confidence levels for evidence assessment
 
-label: Confidence
+label: 'Confidence'
 
 enumeration values:
   - "https://github.com/glamberson/gedcom-evidence/enum-High"
@@ -18,5 +18,5 @@ enumeration values:
   - "https://github.com/glamberson/gedcom-evidence/enum-Low"
   - "https://github.com/glamberson/gedcom-evidence/enum-Hypothesis"
 
-contact: https://github.com/glamberson/gedcom-evidence
+contact: lamberson@yahoo.com
 ...

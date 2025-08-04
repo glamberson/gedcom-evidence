@@ -6,13 +6,16 @@ type: enumeration
 
 uri: https://github.com/glamberson/gedcom-evidence/enum-High
 
-standard tag: HIGH
+extension tags: [ High ]
 
 specification:
-  - High confidence
+  - High Confidence
+  - |
+    Evidence strongly supports the conclusion with minimal doubt.
+    Multiple reliable sources corroborate, or single highly reliable
+    primary source with no conflicting evidence.
 
-value of:
-  - "https://github.com/glamberson/gedcom-evidence/enumset-Confidence"
+label: 'High'
 
-contact: https://github.com/glamberson/gedcom-evidence
+contact: lamberson@yahoo.com
 ...

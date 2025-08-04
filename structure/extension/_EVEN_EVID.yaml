@@ -6,8 +6,7 @@ type: structure
 
 uri: https://github.com/glamberson/gedcom-evidence/_EVEN_EVID
 
-extension tags:
-  - _EVEN_EVID
+extension tags: [ _EVEN_EVID ]
 
 specification:
   - Evidence Event
@@ -18,7 +17,7 @@ specification:
     that are definitively about this individual. Use this for evidence
     that doesn't need to "float" between potential matches.
 
-label: Evidence Discovery Event
+label: 'Evidence Discovery Event'
 
 payload: null
 
@@ -33,5 +32,5 @@ substructures:
 superstructures:
   "https://gedcom.io/terms/v7/record-INDI": "{0:M}"
 
-contact: https://github.com/glamberson/gedcom-evidence
+contact: lamberson@yahoo.com
 ...

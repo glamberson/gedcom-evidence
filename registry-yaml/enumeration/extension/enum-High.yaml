@@ -1,0 +1,21 @@
+%YAML 1.2
+---
+lang: en-US
+
+type: enumeration
+
+uri: https://github.com/glamberson/gedcom-evidence/enum-High
+
+extension tags: [ High ]
+
+specification:
+  - High Confidence
+  - |
+    Evidence strongly supports the conclusion with minimal doubt.
+    Multiple reliable sources corroborate, or single highly reliable
+    primary source with no conflicting evidence.
+
+label: 'High'
+
+contact: lamberson@yahoo.com
+...

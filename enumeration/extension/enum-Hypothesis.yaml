@@ -6,13 +6,16 @@ type: enumeration
 
 uri: https://github.com/glamberson/gedcom-evidence/enum-Hypothesis
 
-standard tag: HYPOTHESIS
+extension tags: [ Hypothesis ]
 
 specification:
-  - Hypothetical connection
+  - Working Hypothesis
+  - |
+    Evidence connection is speculative or theoretical. Represents
+    a research hypothesis that needs verification. Should not be
+    presented as fact without additional supporting evidence.
 
-value of:
-  - "https://github.com/glamberson/gedcom-evidence/enumset-Confidence"
+label: 'Hypothesis'
 
-contact: https://github.com/glamberson/gedcom-evidence
+contact: lamberson@yahoo.com
 ...

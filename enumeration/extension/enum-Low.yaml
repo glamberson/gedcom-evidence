@@ -6,13 +6,16 @@ type: enumeration
 
 uri: https://github.com/glamberson/gedcom-evidence/enum-Low
 
-standard tag: LOW
+extension tags: [ Low ]
 
 specification:
-  - Low confidence
+  - Low Confidence
+  - |
+    Evidence provides weak support for the conclusion. May rely
+    on circumstantial evidence, have significant conflicts, or
+    depend on questionable sources. Further research recommended.
 
-value of:
-  - "https://github.com/glamberson/gedcom-evidence/enumset-Confidence"
+label: 'Low'
 
-contact: https://github.com/glamberson/gedcom-evidence
+contact: lamberson@yahoo.com
 ...
