@@ -6,7 +6,7 @@ type: enumeration
 
 uri: https://github.com/glamberson/gedcom-evidence/enum-High
 
-extension tags: [ High ]
+extension tags: [ _HIGH ]
 
 specification:
   - High Confidence
@@ -16,6 +16,9 @@ specification:
     primary source with no conflicting evidence.
 
 label: 'High'
+
+value of:
+  - "https://github.com/glamberson/gedcom-evidence/enumset-Confidence"
 
 contact: lamberson@yahoo.com
 ...
