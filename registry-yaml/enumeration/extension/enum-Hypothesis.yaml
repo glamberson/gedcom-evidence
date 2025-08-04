@@ -6,7 +6,7 @@ type: enumeration
 
 uri: https://github.com/glamberson/gedcom-evidence/enum-Hypothesis
 
-extension tags: [ Hypothesis ]
+extension tags: [ _HYPOTHESIS ]
 
 specification:
   - Working Hypothesis
@@ -16,6 +16,9 @@ specification:
     presented as fact without additional supporting evidence.
 
 label: 'Hypothesis'
+
+value of:
+  - "https://github.com/glamberson/gedcom-evidence/enumset-Confidence"
 
 contact: lamberson@yahoo.com
 ...

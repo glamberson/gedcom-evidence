@@ -6,7 +6,7 @@ type: enumeration
 
 uri: https://github.com/glamberson/gedcom-evidence/enum-Low
 
-extension tags: [ Low ]
+extension tags: [ _LOW ]
 
 specification:
   - Low Confidence
@@ -16,6 +16,9 @@ specification:
     depend on questionable sources. Further research recommended.
 
 label: 'Low'
+
+value of:
+  - "https://github.com/glamberson/gedcom-evidence/enumset-Confidence"
 
 contact: lamberson@yahoo.com
 ...
